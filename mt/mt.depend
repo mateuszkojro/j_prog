@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1572814056 source:c:\users\mkojr\onedrive - uniwersytet £ódzki\jezyki programowania\mt\main.cpp
+	"measure_time.h"
+	<iostream>
+
+1572814087 c:\users\mkojr\onedrive - uniwersytet £ódzki\jezyki programowania\mt\include\measure_time.h
+
+1572812932 source:c:\users\mkojr\onedrive - uniwersytet £ódzki\jezyki programowania\mt\src\measure_time.cpp
+	"measure_time.h"
+	<iostream>
+	<chrono>
+

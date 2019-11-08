@@ -1,0 +1,6 @@
+﻿  olimpiada_moja.cpp
+C:\Users\mkojr\source\repos\olimpiada_moja\olimpiada_moja.cpp(45,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mkojr\source\repos\olimpiada_moja\olimpiada_moja.cpp(51,59): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mkojr\source\repos\olimpiada_moja\olimpiada_moja.cpp(68,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\mkojr\source\repos\olimpiada_moja\olimpiada_moja.cpp(62): warning C4715: "znajdz_przedzial”: niewszystkie ścieżki kodu zwracają wartość
+  olimpiada_moja.vcxproj -> C:\Users\mkojr\source\repos\olimpiada_moja\Debug\olimpiada_moja.exe
