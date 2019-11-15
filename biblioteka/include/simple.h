@@ -1,19 +1,21 @@
 #pragma once
 
-
+#include <chrono>
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-namespace simple{
 
-template<typename t> void list_show(t tab[],int size);
-template <class t> void swap(t &a, t &b);
-int random(int a, int b);
-template<class t> void sort(t tab[], int size);
-template <class t> void arr_show(t **arr,int sizeX,int sizeY);
+namespace simple {
+
 void init();
+int random(int a, int b);
+template <typename t> void list_show(t *tab, int size);
+template <typename t> void swap(t &a, t &b);
+template <typename t> void sort(t tab[], int size);
+template <typename t> void log(std::string nazwa, t data);
+template <typename t> void arr_show(t **arr, int sizeX, int sizeY);
 
-}
+} // namespace simple
 
 void simple::init() { std::srand(time(NULL)); }
 
@@ -30,20 +32,22 @@ template <typename t> void simple::list_show(t tab[], int size) {
   }
 }
 
+#if 0
 
-//TODO: Sprawdzic czy poprawna kolejnosc wyswietlania x i y
-//TODO: how to pass 2d arr as a paramter
-template<class t> void simple::arr_show(t** arr,int sizeX,int sizeY){
-  for (int x = 0; x < sizeX ; x++){
-    for(int y = 0; y < sizeY ; y++){
+// TODO: Sprawdzic czy poprawna kolejnosc wyswietlania x i y
+// TODO: how to pass 2d arr as a paramter
+//znalezc sensowny sposob przekazywania 2d arrays
+
+template <class t> void simple::arr_show(t **arr, int sizeX, int sizeY) {
+  for (int x = 0; x < sizeX; x++) {
+    for (int y = 0; y < sizeY; y++) {
       std::cout << arr[y][x];
     }
   }
 }
+#endif
 
-
-
-template<class t> void simple::sort(t tab[], int size) {
+template <class t> void simple::sort(t tab[], int size) {
   bool flag;
   do {
     flag = false;
@@ -54,7 +58,6 @@ template<class t> void simple::sort(t tab[], int size) {
       }
     }
   } while (flag);
-
 }
 
 int simple::random(int a, int b) {
@@ -63,3 +66,30 @@ int simple::random(int a, int b) {
 
   return (rand % (b + 1 - a)) + a;
 }
+
+template <typename t> void simple::log(std::string nazwa, t data) {
+  std::cout << std::endl << "---------------LOG-------------------" << std::endl;
+  std::cout << nazwa << " : " << data << std::endl <<std::endl;
+}
+
+class measure_time {
+private:
+  std::chrono::time_point<std::chrono::high_resolution_clock> start;
+  std::chrono::time_point<std::chrono::high_resolution_clock> stop;
+
+public:
+  int time;
+
+  measure_time() { start = std::chrono::high_resolution_clock::now(); }
+  ~measure_time() {
+
+    stop = std::chrono::high_resolution_clock::now();
+
+    auto duration =
+        std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+
+    int time = duration.count();
+
+    simple::log("czas wykonania ",time);
+  }
+};
