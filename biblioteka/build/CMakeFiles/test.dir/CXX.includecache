@@ -7,8 +7,12 @@
 #IncludeRegexTransform: 
 
 ../include/simple.h
-
-/home/mateusz/workspace/j_prog/biblioteka/include/simple.h
+cstdlib
+-
+ctime
+-
+iostream
+-
 
 /home/mateusz/workspace/j_prog/biblioteka/src/main.cpp
 simple.h
@@ -19,14 +23,4 @@ ctime
 -
 iostream
 -
-
-/home/mateusz/workspace/j_prog/biblioteka/src/simple.cpp
-cstdlib
--
-ctime
--
-iostream
--
-../include/simple.h
-/home/mateusz/workspace/j_prog/biblioteka/include/simple.h
 

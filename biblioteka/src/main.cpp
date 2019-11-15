@@ -1,9 +1,7 @@
 
 
 
-//TODO ogarnac czm templates sie nie kompiluja 
-//mozna sprobowac wrzucic wszytsko do jjednego pliku iozobqaczyc czm nie dziala 
-//to one psuja bo jak zmiennielem funckcje na same int to wszytsko dziala bez zarzutu
+//jezeli wszytsko jest w jednym pliku to sie kompiluje bez problemu 
 
 
 
@@ -25,5 +23,5 @@ int main() {
   std::cout << x;
   simple::sort(tab, size);
   simple::list_show(tab, size);
-  //simple::arr_show(d2, 3.3);
+  simple::arr_show(d2, 3.3);
 }
