@@ -18,4 +18,4 @@ file(GLOB SOURCES "src/*.cpp")
 
 set(CMAKE_BUILD_TYPE Debug)
 
-add_executable(test ${SOURCES})
+add_executable(biblioteka ${SOURCES})

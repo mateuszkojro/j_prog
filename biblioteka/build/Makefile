@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named biblioteka
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+biblioteka: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 biblioteka
+.PHONY : biblioteka
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+biblioteka/fast:
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
+.PHONY : biblioteka/fast
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +129,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +138,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +147,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/simple.o: src/simple.cpp.o
@@ -156,7 +156,7 @@ src/simple.o: src/simple.cpp.o
 
 # target to build an object file
 src/simple.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/simple.cpp.o
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/simple.cpp.o
 .PHONY : src/simple.cpp.o
 
 src/simple.i: src/simple.cpp.i
@@ -165,7 +165,7 @@ src/simple.i: src/simple.cpp.i
 
 # target to preprocess a source file
 src/simple.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/simple.cpp.i
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/simple.cpp.i
 .PHONY : src/simple.cpp.i
 
 src/simple.s: src/simple.cpp.s
@@ -174,7 +174,7 @@ src/simple.s: src/simple.cpp.s
 
 # target to generate assembly for a file
 src/simple.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/simple.cpp.s
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/simple.cpp.s
 .PHONY : src/simple.cpp.s
 
 # Help Target
@@ -184,7 +184,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... biblioteka"
 	@echo "... edit_cache"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

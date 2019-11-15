@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/mateusz/workspace/j_prog/biblioteka
 CMAKE_BINARY_DIR = /home/mateusz/workspace/j_prog/biblioteka/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/biblioteka.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mateusz/workspace/j_prog/biblioteka/build/CMakeFiles --progress-num=1,2,3 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/biblioteka.dir/all:
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/depend
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mateusz/workspace/j_prog/biblioteka/build/CMakeFiles --progress-num=1,2,3 "Built target biblioteka"
+.PHONY : CMakeFiles/biblioteka.dir/all
 
 # Include target in all.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/biblioteka.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
+CMakeFiles/biblioteka.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mateusz/workspace/j_prog/biblioteka/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/biblioteka.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mateusz/workspace/j_prog/biblioteka/build/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+.PHONY : CMakeFiles/biblioteka.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
+biblioteka: CMakeFiles/biblioteka.dir/rule
 
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+.PHONY : biblioteka
 
 # clean rule for target.
-clean: CMakeFiles/test.dir/clean
+CMakeFiles/biblioteka.dir/clean:
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/clean
+.PHONY : CMakeFiles/biblioteka.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/biblioteka.dir/clean
 
 .PHONY : clean
 
