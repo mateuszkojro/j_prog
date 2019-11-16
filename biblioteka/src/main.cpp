@@ -19,7 +19,7 @@ int main() {
   for (int i = 0; i < size; i++) {
     tab[i] = simple::random(0, 10000);
   }
-  {measure_time timing;simple::sort(tab, size);}
+  {simple::measure_time timing;simple::sort(tab, size);}
   //simple::list_show(tab, size);
   // simple::arr_show(d2, 3.3);
 }

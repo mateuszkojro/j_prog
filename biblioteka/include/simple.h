@@ -9,20 +9,36 @@ namespace simple {
 
 void init();
 int random(int a, int b);
+template <typename t> bool check_duplicates(t *tab, int size, int x);
 template <typename t> void list_show(t *tab, int size);
+template <typename t> void arr_show(t **arr, int sizeX, int sizeY);
 template <typename t> void swap(t &a, t &b);
 template <typename t> void sort(t tab[], int size);
 template <typename t> void log(std::string nazwa, t data);
-template <typename t> void arr_show(t **arr, int sizeX, int sizeY);
+
+class measure_time {
+private:
+  std::chrono::time_point<std::chrono::high_resolution_clock> start;
+  std::chrono::time_point<std::chrono::high_resolution_clock> stop;
+
+public:
+  int time;
+
+  measure_time();
+  ~measure_time();
+};
 
 } // namespace simple
 
-void simple::init() { std::srand(time(NULL)); }
+template <typename t> bool check_duplicates(t *tab, int size, t x) {
 
-template <class t> void simple::swap(t &a, t &b) {
-  t temp = a;
-  a = b;
-  b = temp;
+  for (int j = 0; j < size; ++j) {
+    if (tab[j] == x) {
+      return false;
+    }
+  }
+
+  return false;
 }
 
 template <typename t> void simple::list_show(t tab[], int size) {
@@ -47,6 +63,12 @@ template <class t> void simple::arr_show(t **arr, int sizeX, int sizeY) {
 }
 #endif
 
+template <class t> void simple::swap(t &a, t &b) {
+  t temp = a;
+  a = b;
+  b = temp;
+}
+
 template <class t> void simple::sort(t tab[], int size) {
   bool flag;
   do {
@@ -54,42 +76,15 @@ template <class t> void simple::sort(t tab[], int size) {
     for (int j = 0; j < size - 1; j++) {
       if (tab[j] > tab[j + 1]) {
         flag = true;
+
         swap(tab[j], tab[j + 1]);
       }
     }
   } while (flag);
 }
 
-int simple::random(int a, int b) {
-  // wymaga ziarna w postaci #include<ctime> std::srand(time(NULL))
-  int rand = std::rand();
-
-  return (rand % (b + 1 - a)) + a;
-}
-
 template <typename t> void simple::log(std::string nazwa, t data) {
-  std::cout << std::endl << "---------------LOG-------------------" << std::endl;
-  std::cout << nazwa << " : " << data << std::endl <<std::endl;
+  std::cout << std::endl
+            << "---------------LOG-------------------" << std::endl;
+  std::cout << nazwa << " : " << data << std::endl << std::endl;
 }
-
-class measure_time {
-private:
-  std::chrono::time_point<std::chrono::high_resolution_clock> start;
-  std::chrono::time_point<std::chrono::high_resolution_clock> stop;
-
-public:
-  int time;
-
-  measure_time() { start = std::chrono::high_resolution_clock::now(); }
-  ~measure_time() {
-
-    stop = std::chrono::high_resolution_clock::now();
-
-    auto duration =
-        std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
-
-    int time = duration.count();
-
-    simple::log("czas wykonania ",time);
-  }
-};

@@ -4,5 +4,6 @@
 CMakeFiles/biblioteka.dir/src/main.cpp.o: ../include/simple.h
 CMakeFiles/biblioteka.dir/src/main.cpp.o: ../src/main.cpp
 
+CMakeFiles/biblioteka.dir/src/simple.cpp.o: ../include/simple.h
 CMakeFiles/biblioteka.dir/src/simple.cpp.o: ../src/simple.cpp
 

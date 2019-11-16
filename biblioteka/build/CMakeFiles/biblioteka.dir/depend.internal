@@ -5,4 +5,5 @@ CMakeFiles/biblioteka.dir/src/main.cpp.o
  ../include/simple.h
  /home/mateusz/workspace/j_prog/biblioteka/src/main.cpp
 CMakeFiles/biblioteka.dir/src/simple.cpp.o
+ ../include/simple.h
  /home/mateusz/workspace/j_prog/biblioteka/src/simple.cpp
