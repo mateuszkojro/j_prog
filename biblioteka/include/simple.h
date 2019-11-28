@@ -13,7 +13,7 @@ template <typename t> bool check_duplicates(t *tab, int size, int x);
 template <typename t> void list_show(t *tab, int size);
 template <typename t> void arr_show(t **arr, int sizeX, int sizeY);
 template <typename t> void swap(t &a, t &b);
-template <typename t> void sort(t tab[], int size);
+template <typename t> void sort(t *tab, int size);
 template <typename t> void log(std::string nazwa, t data);
 
 class measure_time {
@@ -38,12 +38,11 @@ template <typename t> bool check_duplicates(t *tab, int size, t x) {
     }
   }
 
-  return false;
+  return true;
 }
 
 template <typename t> void simple::list_show(t tab[], int size) {
   for (int i = 0; i < size; i++) {
-
     std::cout << tab[i] << ", ";
   }
 }
@@ -76,7 +75,6 @@ template <class t> void simple::sort(t tab[], int size) {
     for (int j = 0; j < size - 1; j++) {
       if (tab[j] > tab[j + 1]) {
         flag = true;
-
         swap(tab[j], tab[j + 1]);
       }
     }

@@ -16,6 +16,16 @@ ctime
 iostream
 -
 
+/home/mateusz/workspace/j_prog/biblioteka/src/main.cpp
+simple.h
+/home/mateusz/workspace/j_prog/biblioteka/src/simple.h
+cstdlib
+-
+ctime
+-
+iostream
+-
+
 /home/mateusz/workspace/j_prog/biblioteka/src/simple.cpp
 simple.h
 /home/mateusz/workspace/j_prog/biblioteka/src/simple.h
