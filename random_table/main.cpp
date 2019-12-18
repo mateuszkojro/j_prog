@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void my_sort(int &tab);
+void my_sort(int *tab,int len);
 
 
 int main()
@@ -20,34 +20,33 @@ int main()
     for (int i = 0; i < len;i++){
         int var1 = rand();
         int wynik =  var1 % (1000);
-        tab[i] = wynik;
+        *(tab+i) = wynik;
         //cout << wynik<<endl;
 
     }
-
-
-
-my_sort(tab);
-    for (int i = 0; i < len;i ++){
-
-        cout << tab[i] << " " ;
-
-    }
-
-
-    return 0;
+for (int i = 0;i < len;i++){
+    std::cout << *(tab+i) << std::endl;
+}
+my_sort(tab,len);
+std::cout << std::endl;
+for (int i = 0;i < len;i++){
+    std::cout << *(tab+i) << std::endl;
 }
 
-void my_sort(int (&tab)[10]{
+}
+
+
+
+void my_sort(int (*tab),int len){
 //not optimal
 bool r = true;
     while(r == true){
         r = false;
         for(int y = 0;y < len-1;y++){
 
-            if(tab[y] > tab[y+1]){
-                int temp = tab[y+1];
-                tab[y+1] = tab[y];
+            if(*(tab+y) > *(tab+y+1)){
+                int temp = *(tab+y+1);
+                *(tab+y+1) = *(tab+y);
                 tab[y] = temp;
                 r = true;
             }
