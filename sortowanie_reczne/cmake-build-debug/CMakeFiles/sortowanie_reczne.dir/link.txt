@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/sortowanie_reczne.dir/main.cpp.o  -o sortowanie_reczne 

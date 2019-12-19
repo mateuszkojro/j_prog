@@ -1,0 +1,3 @@
+/home/mateusz/workspace/sortowanie_reczne/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mateusz/workspace/sortowanie_reczne/cmake-build-debug/CMakeFiles/sortowanie_reczne.dir
+/home/mateusz/workspace/sortowanie_reczne/cmake-build-debug/CMakeFiles/edit_cache.dir
